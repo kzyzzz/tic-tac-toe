@@ -10,9 +10,41 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">TicTacToe</div>
+      <div class="header">Start New Game</div>
       <div class="game">
-        <div class="gameboard"></div>
+        <div class="gameboard">
+          <div class="placeholder">TicTacToe</div>
+        </div>
+        <div class="player-one-settings">
+          <label for="p1name">Player One Name:</label>
+          <input name="p1name" id="p1name" type="text" value="Player One" />
+          <div class="player-select" id="p1type" playertype="Human">
+            <button playertype="Human" disabled>Human</button>
+            <button playertype="CPU">CPU</button>
+          </div>
+          <div class="p1-winnings"></div>
+        </div>
+        <div class="player-two-settings">
+          <label for="p2name">Player Two Name:</label>
+          <input name="p2name" id="p2name" type="text" value="Player Two" />
+          <div class="player-select" id="p2type" playertype="CPU">
+            <button playertype="Human">Human</button>
+            <button playertype="CPU" disabled>CPU</button>
+          </div>
+          <div class="p2-winnings"></div>
+        </div>
+        <div class="buttons">
+          <button id="game-start" onclick="displayController.startGame();">
+            Start Game
+          </button>
+          <button
+            class="disabled"
+            id="game-next-round"
+            onclick="displayController.nextRound();"
+          >
+            Next Round
+          </button>
+        </div>
       </div>
     </div>
   </body>
